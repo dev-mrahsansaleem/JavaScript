@@ -115,6 +115,20 @@
       myFun();
       myFun();
       myFun();
+
+      function sumFun(a, b) {
+        var c = a + b; //if we avoid var then C will become global
+        console.log(c);
+      }
+      sumFun(10, 12);
+      //console.log(c); as C become global it can't access here =>error
+
+      var testOutfit = "testing globl";
+      function myOutfit() {
+        var testOutfit = "my shirt"; //local scope var will be consider if we have same name of local and glocal variable
+        return testOutfit;
+      }
+      console.log(myOutfit());
     </script>
   </head>
   <body></body>
