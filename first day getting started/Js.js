@@ -1,15 +1,13 @@
-// object litrels
-let user = {
-  name: "none",
-  age: 30,
-  email: "none@gmail.com",
-  blog: ["blog1", "blog2", "blog3"],
-  login: function() {
-    console.log("user login");
-  },
-  logout: function() {
-    console.log("user logout");
+const button = document.querySelector("button");
+const popup = document.querySelector(".popup-wraper");
+var status = false;
+button.addEventListener("click", () => {
+  if (status == false) {
+    popup.style.display = "block";
+    status = true;
+    debugger;
+  } else {
+    popup.style.display = "none";
+    status = false;
   }
-};
-user.login();
-user.logout();
+});
